@@ -10,25 +10,20 @@
 <header class="text-primary-color dark-primary-color">
   <h1>Timber's Github Projects</h1>
   <div class="icons-outer">
-    <div class="svg-div">
+    <div class="svg-div github" tooltip="Github">
       <GithubLogo />
-      <p>Github</p>
     </div>
-    <div class="svg-div">
+    <div class="svg-div" tooltip="Discord">
       <DiscordLogo />
-      <p>Discord</p>
     </div>
-    <div class="svg-div">
+    <div class="svg-div" tooltip="Steam">
       <SteamLogo />
-      <p>Steam</p>
     </div>
-    <div class="svg-div">
+    <div class="svg-div" tooltip="Youtube">
       <YoutubeLogo />
-      <p>Youtube</p>
     </div>
-    <div class="svg-div">
+    <div class="svg-div" tooltip="Twitch">
       <TwitchLogo />
-      <p>Twitch</p>
     </div>
   </div>
 </header>
@@ -59,22 +54,20 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    white-space: nowrap;
   }
 
-  .svg-div > p {
-    margin: 0;
-    padding: 0 0 0 0;
+  .svg-div::after {
+    content: attr(tooltip);
+    padding: 0;
     width: 0;
-    overflow: hidden;
-    transition: all ease 0.5s;
-    border-radius: 2ch;
     color: #eeeeee00;
+    transition: all cubic-bezier(.68,-0.55,.27,1.55) 0.5s;
   }
 
-  .svg-div:hover > p {
-    padding: 0 0 0 2ch;
-    width: 8ch;
+  .svg-div:hover::after {
+    content: attr(tooltip);
+    width: 5ch;
     color: #eeeeeeff;
+    padding: 0 0 0 2ch;
   }
 </style>
