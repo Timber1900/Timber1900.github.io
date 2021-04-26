@@ -1,10 +1,9 @@
 <script lang="ts">
-  import GithubLogo from "./GithubLogo.svelte";
-  import DiscordLogo from "./DiscordLogo.svelte";
-  import SteamLogo from "./SteamLogo.svelte";
-  import YoutubeLogo from "./YoutubeLogo.svelte";
-  import TwitchLogo from "./TwitchLogo.svelte";
-
+  import GithubLogo from './GithubLogo.svelte';
+  import DiscordLogo from './DiscordLogo.svelte';
+  import SteamLogo from './SteamLogo.svelte';
+  import YoutubeLogo from './YoutubeLogo.svelte';
+  import TwitchLogo from './TwitchLogo.svelte';
 </script>
 
 <header class="text-primary-color dark-primary-color">
@@ -30,19 +29,24 @@
 
 <style>
   header {
-    padding: 1em;
+    padding: 0.5rem 1rem;
     grid-column: 1 / 4;
     grid-template-columns: auto 1fr;
     display: grid;
   }
-  
+
+  h1 {
+    white-space: nowrap;
+    max-lines: 1;
+  }
+
   .icons-outer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
     height: 100%;
-    padding: 0 5em;
+    padding: 0 5em 0 1em;
   }
 
   .icons-outer > div {
@@ -61,7 +65,7 @@
     padding: 0;
     width: 0;
     color: #eeeeee00;
-    transition: all cubic-bezier(.68,-0.55,.27,1.55) 0.5s;
+    transition: all cubic-bezier(0.65, 0.05, 0.36, 1) 0.5s;
   }
 
   .svg-div:hover::after {

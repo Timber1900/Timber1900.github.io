@@ -1,6 +1,4 @@
-<main class="text-primary-color">
-  Main
-</main>
+<main class="text-primary-color light-primary-color">Main</main>
 
 <style>
   main {
