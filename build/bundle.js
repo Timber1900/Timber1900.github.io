@@ -42,6 +42,10 @@ var app = (function () {
     function space() {
         return text(' ');
     }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
     function attr(node, attribute, value) {
         if (value == null)
             node.removeAttribute(attribute);
@@ -521,6 +525,8 @@ var app = (function () {
     	let div4;
     	let twitchlogo;
     	let current;
+    	let mounted;
+    	let dispose;
     	githublogo = new GithubLogo({});
     	discordlogo = new DiscordLogo({});
     	steamlogo = new SteamLogo({});
@@ -582,6 +588,18 @@ var app = (function () {
     			append(div5, div4);
     			mount_component(twitchlogo, div4, null);
     			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen(div0, "click", /*click_handler*/ ctx[1]),
+    					listen(div1, "click", /*copyDiscordTag*/ ctx[0]),
+    					listen(div2, "click", /*click_handler_1*/ ctx[2]),
+    					listen(div3, "click", /*click_handler_2*/ ctx[3]),
+    					listen(div4, "click", /*click_handler_3*/ ctx[4])
+    				];
+
+    				mounted = true;
+    			}
     		},
     		p: noop,
     		i(local) {
@@ -608,14 +626,63 @@ var app = (function () {
     			destroy_component(steamlogo);
     			destroy_component(youtubelogo);
     			destroy_component(twitchlogo);
+    			mounted = false;
+    			run_all(dispose);
     		}
     	};
+    }
+
+    function instance($$self) {
+
+    	const copyDiscordTag = () => {
+    		var el = document.createElement("textarea");
+    		el.value = "Timber1900#6379";
+    		el.setAttribute("readonly", "");
+
+    		//@ts-expect-error
+    		el.style = { position: "absolute", left: "-9999px" };
+
+    		document.body.appendChild(el);
+    		el.select();
+    		document.execCommand("copy");
+    		document.body.removeChild(el);
+
+    		setTimeout(
+    			() => {
+    			},
+    			100000
+    		);
+    	};
+
+    	const click_handler = () => {
+    		window.open("https://www.github.com/Timber1900");
+    	};
+
+    	const click_handler_1 = () => {
+    		window.open("https://steamcommunity.com/id/timber1900/");
+    	};
+
+    	const click_handler_2 = () => {
+    		window.open("https://www.youtube.com/channel/UC8QDXDI7nTM3T-qEDAn37OA");
+    	};
+
+    	const click_handler_3 = () => {
+    		window.open("https://www.twitch.tv/timber1900");
+    	};
+
+    	return [
+    		copyDiscordTag,
+    		click_handler,
+    		click_handler_1,
+    		click_handler_2,
+    		click_handler_3
+    	];
     }
 
     class Header extends SvelteComponent {
     	constructor(options) {
     		super();
-    		init(this, options, null, create_fragment$6, safe_not_equal, {});
+    		init(this, options, instance, create_fragment$6, safe_not_equal, {});
     	}
     }
 
