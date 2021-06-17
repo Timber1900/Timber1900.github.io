@@ -24,6 +24,9 @@ module.exports = {
       },
       transitionProperty: {
         'width': 'width'
+      },
+      screens: {
+        'custombp': {'raw': '(min-height: 34em)'}
       }
     },
   },
