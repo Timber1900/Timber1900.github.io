@@ -7,10 +7,13 @@ module.exports = {
         'pancake': '1fr auto 1fr'
       },
       width: {
-        'full-minus-padding': 'calc(100% - 6em)'
+        'full-minus-padding': 'calc(100% - 6em)',
+        'full-minus-padding-small': 'calc(100% - 2em)',
+        'half': '50%'
       },
       maxWidth: {
-        'full-minus-padding': 'calc(100% - 6em)'
+        'full-minus-padding': 'calc(100% - 6em)',
+        'full-minus-padding-small': 'calc(100% - 2em)'
       },
       minHeight: {
         'card': '14em'
