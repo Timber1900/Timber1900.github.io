@@ -8,7 +8,7 @@ module.exports = {
       },
       width: {
         'full-minus-padding': 'calc(100% - 6em)'
-      },
+      }, 
       minHeight: {
         'card': '14em'
       },
@@ -18,13 +18,17 @@ module.exports = {
         'youtube': '#FF0000',
         'steam': '#151D38',
         'twitch': '#9147FF'
+      },
+      transitionProperty: {
+        'width': 'width'
       }
     },
   },
   variants: {
     extend: {
       visibility: ['group-hover'],
-      display: ['group-hover']
+      display: ['group-hover'],
+      width: ['group-hover'],
 
     }
   },

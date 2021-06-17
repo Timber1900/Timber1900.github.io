@@ -8,27 +8,27 @@ const Footer = () => {
         <div className="md:absolute md:right-0 flex justify-center place-items-center">
           <div className="flex flex-row group px-2 w-auto h-auto place-items-center">
             <DiscordLogo className="px-2 w-12 h-12 fill-current text-discord dark:text-white"/>
-            <p className="w-auto h-auto hidden invisible group-hover:visible group-hover:block text-black dark:text-white font-sans font-bold text-base">Discord</p>
+            <p className="h-auto w-0 group-hover:w-14 transition-all text-black dark:text-white font-sans font-bold text-base overflow-hidden ">Discord</p>
           </div>
 
           <div className="flex flex-row group px-2 w-auto h-auto place-items-center">
             <GithubLogo  className="px-2 w-12 h-12 fill-current text-github dark:text-white"/>
-            <p className="w-auto h-auto hidden invisible group-hover:visible group-hover:block text-black dark:text-white font-sans font-bold text-base">Github</p>
+            <p className="h-auto w-0 group-hover:w-14 transition-all text-black dark:text-white font-sans font-bold text-base overflow-hidden ">Github</p>
           </div>
 
           <div className="flex flex-row group px-2 w-auto h-auto place-items-center">
             <TwitchLogo  className="px-2 w-12 h-12 fill-current text-twitch"/>
-            <p className="w-auto h-auto hidden invisible group-hover:visible group-hover:block text-black dark:text-white font-sans font-bold text-base">Twitch</p>
+            <p className="h-auto w-0 group-hover:w-14 transition-all text-black dark:text-white font-sans font-bold text-base overflow-hidden ">Twitch</p>
           </div>
 
           <div className="flex flex-row group px-2 w-auto h-auto place-items-center">
             <YoutubeLogo className="px-2 w-12 h-12 fill-current text-youtube"/>
-            <p className="w-auto h-auto hidden invisible group-hover:visible group-hover:block text-black dark:text-white font-sans font-bold text-base">Youtube</p>
+            <p className="h-auto w-0 group-hover:w-16 bl transition-all text-black dark:text-white font-sans font-bold text-base overflow-hidden ">Youtube</p>
           </div>
 
           <div className="flex flex-row group px-2 w-auto h-auto place-items-center">
             <SteamLogo   className="px-2 w-12 h-12 fill-current text-steam dark:text-white"/>
-            <p className="w-auto h-auto hidden invisible group-hover:visible group-hover:block text-black dark:text-white font-sans font-bold text-base">Steam</p>
+            <p className="h-auto w-0 group-hover:w-12 transition-all text-black dark:text-white font-sans font-bold text-base overflow-hidden ">Steam</p>
           </div>
 
         </div>
