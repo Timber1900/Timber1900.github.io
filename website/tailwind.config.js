@@ -8,7 +8,10 @@ module.exports = {
       },
       width: {
         'full-minus-padding': 'calc(100% - 6em)'
-      }, 
+      },
+      maxWidth: {
+        'full-minus-padding': 'calc(100% - 6em)'
+      },
       minHeight: {
         'card': '14em'
       },
