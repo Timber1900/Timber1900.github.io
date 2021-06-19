@@ -3,7 +3,11 @@ import OpenTkExample from "./images/OpenTKExample.mp4"
 import MyPhoto from "./images/Me.png";
 import EqViewerExample from "./images/3DEqViewer.mp4";
 import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
+import { useRouteMatch, Link } from "react-router-dom";
+
 const Content = () => {
+  let match = useRouteMatch();
+
   return(
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 auto-rows-auto lg:gap-12 h-full w-full py-2 px-6 lg:px-12">
       <div className="grid place-items-center min-h-card shadow-lg font-extrabold text-2xl bg-blue-500 dark:bg-blue-800 rounded-xl dark:text-white text-black 2xl:grid-cols-2 2xl:grid-rows-2 grid-cols-1 gap-2">
@@ -20,20 +24,21 @@ const Content = () => {
       <div className="grid place-items-center min-h-card shadow-lg font-extrabold text-2xl bg-blue-500 dark:bg-blue-800 rounded-xl dark:text-white text-black 2xl:grid-cols-2 2xl:grid-rows-2 grid-cols-1 gap-2">
         <div className="h-full w-full p-4 flex 2xl:row-span-2 rounded-md flex-col text-lg text-justify font-semibold">
           <h1 className="text-4xl font-bold py-8 text-center">WebDL</h1>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/Timber1900/WebDL" className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">WebDL</a> is a Windows application designed to download videos from the web with a focus on popular websites such as: <span className="font-bold">YouTube</span>, <span className="font-bold">Twitch</span>, <span className="font-bold">Imgur</span>, <span className="font-bold">Twitter</span>...</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;<Link to={`${match.url}webdl`} className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">WebDL</Link> is a Windows application designed to download videos from the web with a focus on popular websites such as: <span className="font-bold">YouTube</span>, <span className="font-bold">Twitch</span>, <span className="font-bold">Imgur</span>, <span className="font-bold">Twitter</span>...</p>
           <p className="text-left">{"•"} To see a list of currently supported websites click <a href="https://ytdl-org.github.io/youtube-dl/supportedsites.html" className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">here</a>.</p>
           <p className="text-left">{"•"} If you have any issues using the app, please report them <a href="https://github.com/Timber1900/WebDL/issues/new/choose" className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">here</a>.</p>
         </div>
-        <div className="h-full w-full p-4 grid place-items-center 2xl:row-start-auto row-start-2  rounded-md">
+        <div className="h-full w-full p-4 grid place-items-center 2xl:row-start-auto row-start-2 rounded-md">
           <video autoPlay loop muted playsInline src={WebDlLogo} alt='WebDL' className="rounded-md shadow-xl"/>
         </div>
-        <div className="h-full w-full p-4 grid place-items-center rounded-md">
+        <div className="h-auto w-full p-4 flex flex-col justify-start items-center rounded-md my-auto">
           <div className="flex flex-row place-items-center">
             <GetAppRoundedIcon id="downloadWebDL" className="text-black dark:text-white fill-current w-8 h-8 mx-1"/>
             <label htmlFor='downloadWebDL'>
               <a href="https://github.com/Timber1900/WebDL/releases/latest" className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">Download</a>
             </label>
           </div>
+          <Link to={`${match.url}webdl`} className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">{"•"} Learn more</Link>
         </div>
       </div>
       <div className="grid place-items-center min-h-card shadow-lg font-extrabold text-2xl bg-blue-500 dark:bg-blue-800 rounded-xl dark:text-white text-black 2xl:grid-cols-2 2xl:grid-rows-2 grid-cols-1 gap-2">
@@ -49,7 +54,7 @@ const Content = () => {
         <div className="h-full w-full p-4 grid place-items-center 2xl:row-start-auto row-start-2  rounded-md">
           <video autoPlay loop muted playsInline src={OpenTkExample} alt='OpenTK' className="rounded-md shadow-xl"/>
         </div>
-        <div className="h-full w-full p-4 grid rounded-md">
+        <div className="h-auto w-full p-4 flex flex-col justify-start items-center rounded-md my-auto">
           <a href="https://github.com/Timber1900/OpenTK-3D-Engine" className="text-left inline-block text-indigo-800 hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 dark:text-blue-400 font-bold">{"•"} Github</a>
           <a href="https://www.nuget.org/packages/OpenTK.3D.Library/" className="text-left inline-block text-indigo-800 hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 dark:text-blue-400 font-bold">{"•"} Nuget</a>
           <a href="https://open.timber1900.tk" className="text-left inline-block text-indigo-800 hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 dark:text-blue-400 font-bold">{"•"} Documentation</a>
@@ -65,7 +70,7 @@ const Content = () => {
         <div className="h-full w-full p-4 grid place-items-center 2xl:row-start-auto row-start-2  rounded-md">
           <video autoPlay loop muted playsInline src={EqViewerExample} alt='3D Param Eq Viewer Example' className="rounded-md shadow-xl"/>
         </div>
-        <div className="h-full w-full p-4 grid place-items-center rounded-md">
+        <div className="h-auto w-full p-4 flex flex-col justify-start items-center rounded-md my-auto">
           <a href="https://github.com/Timber1900/3d-parametric-function-viewer" className="text-left inline-block text-indigo-800 hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 dark:text-blue-400 font-bold">{"•"} Github</a>
           <a href="https://param.timber1900.tk/" className="text-left inline-block text-indigo-800 hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 dark:text-blue-400 font-bold">{"•"} Website</a>
         </div>
