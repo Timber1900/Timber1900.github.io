@@ -2,7 +2,7 @@ import {DiscordLogo, GithubLogo, TwitchLogo, YoutubeLogo, SteamLogo} from "./svg
 
 const Footer = () => {
   return(
-    <footer className="bg-white dark:bg-gray-800 w-full flex justify-center custombp:sticky custombp:bottom-0">
+    <footer className="bg-white dark:bg-gray-800 w-full flex justify-center custombp:sticky custombp:bottom-0 z-10">
       <div className="relative flex h-20 justify-center place-items-center flex-col border-t border-gray-200 dark:border-gray-700 sm:w-full-minus-padding my-2 sm:max-w-full-minus-padding w-full-minus-padding-small max-w-full-minus-padding-small">
         <div className="md:absolute md:right-0 flex justify-center place-items-center">
           <div className="flex flex-row group px-1 w-auto h-auto place-items-center hover:opacity-100 opacity-60 transition-opacity" onClick={() => {window.open("discord:///users/263073389432930314")}}>

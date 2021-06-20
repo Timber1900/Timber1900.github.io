@@ -4,12 +4,16 @@ import MyPhoto from "./images/Me.png";
 import EqViewerExample from "./images/3DEqViewer.mp4";
 import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 import { useRouteMatch, Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Content = () => {
   let match = useRouteMatch();
+  useEffect(() => {
+    document.title = 'Hugos Github Projects';
+  })
 
   return(
-    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 auto-rows-auto lg:gap-12 h-full w-full py-2 px-6 lg:px-12">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 auto-rows-auto lg:gap-12 h-full w-full py-2 px-6 lg:px-12 z-0">
       <div className="grid place-items-center min-h-card shadow-lg font-extrabold text-2xl bg-blue-500 dark:bg-blue-800 rounded-xl dark:text-white text-black 2xl:grid-cols-2 2xl:grid-rows-2 grid-cols-1 gap-2">
         <div className="h-full w-full p-4 flex 2xl:row-span-2 rounded-md flex-col text-lg text-justify font-semibold">
           <h1 className="text-4xl font-bold py-8 text-center">A bit about me!</h1>

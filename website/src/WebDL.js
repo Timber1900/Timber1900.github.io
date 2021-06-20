@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import WebDL_Extension_Example from "./images/WebDL_Extension_Example.mp4";
 import WebDL_Playlist_Example from "./images/WebDL_Playlist_Example.mp4";
 import WebDL_Search_Example from "./images/WebDL_Search_Example.mp4";
@@ -7,6 +7,10 @@ import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 
 const WebDL = () => {
   const [showCopied, setShowCopied] = useState(false)
+
+  useEffect(() => {
+    document.title = 'Hugos Github Projects - WebDL';
+  })
 
   const copyWingetCommand = () => {
     setShowCopied(true);
@@ -18,19 +22,19 @@ const WebDL = () => {
   }
 
   return(
-    <div className="flex flex-col gap-4 justify-start items-center">
+    <div className="flex flex-col gap-4 justify-start items-center z-0">
       {/*Introduction*/}
-      <div className="dark:text-white text-black font-extrabold text-lg flex text-center gap-2 flex-col jus m-4">
+      <div className="dark:text-white text-black font-extrabold text-lg flex text-center gap-2 flex-col jus sm:m-4">
         <h1 className="text-center text-4xl font-extrabold text-black dark:text-white py-5 m-4">WebDL</h1>
         <p className="text-justify font-semibold m-4">WebDL is a Windows application designed to download videos from the web with a focus on popular websites such as: <span className="font-bold">YouTube</span>, <span className="font-bold">Twitch</span>, <span className="font-bold">Imgur</span>, <span className="font-bold">Twitter</span>...</p>
         <h1 className="text-center text-4xl font-extrabold text-black dark:text-white py-5">Installing WebDL</h1>
         <div className="flex flex-col justify-start items-center md:grid md:grid-cols-5 md:grid-rows-1 md:place-items-center max-w-screen-xl h-auto w-auto gap-4 m-4">
           <div className="col-span-3 rounded-lg w-full flex flex-col justify-start items-center h-24">
             <h2 className="py-2 px-4">Using winget</h2>
-            <code className="dark:bg-black bg-gray-300 py-2 px-4 rounded-lg min-w-max w-4/5 flex justify-start items-center">
-              {"C:>"} winget install WebDL
+            <code className="dark:bg-black bg-gray-300 py-2 px-4 sm:text-xl text-base rounded-lg min-w-max sm:w-4/5 flex justify-start items-center">
+              <p className="mr-4">{"C:>"} winget install WebDL</p>
               <div className="group relative w-max h-max ml-auto self-end">
-                <button onClick={copyWingetCommand} className="dark:bg-gray-900 bg-gray-400 px-1 py-0.5 rounded-lg focus:outline-none dark:active:bg-gray-700 active:bg-gray-500 transition-colors">Copy!</button>
+                <button onClick={copyWingetCommand} className="dark:bg-gray-900 bg-gray-400 px-1 py-0.5 rounded-lg focus:outline-none dark:active:bg-gray-700 active:bg-gray-500 transition-colors over">Copy!</button>
                 <div className={`absolute ${showCopied ? "opacity-80" : "opacity-0"} block bottom-full-plus bg-gray-400 group-active:opacity-80 transition-opacity duration-500 rounded-md py-0.5 px-1 left-1/2 -translate-x-1/2 transform`}>
                   <p>Copied</p>
                   <div className="relative">
