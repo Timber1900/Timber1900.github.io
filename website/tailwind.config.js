@@ -26,10 +26,14 @@ module.exports = {
         'twitch': '#9147FF'
       },
       transitionProperty: {
-        'width': 'width'
+        'width': 'width',
+        'fill': 'fill'
       },
       screens: {
         'custombp': {'raw': '(min-height: 34em)'}
+      },
+      inset: {
+        'full-plus': 'calc(100% + .5rem)'
       }
     },
   },
@@ -38,8 +42,11 @@ module.exports = {
       visibility: ['group-hover'],
       display: ['group-hover'],
       width: ['group-hover'],
-
+      backgroundColor: ['active'],
+      opacity: ['group-active']
     }
   },
-  plugins: []
+  plugins: [
+    require('tailwindcss-interaction-variants'),
+  ]
 }

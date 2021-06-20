@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Router>
-      <div className="bg-white dark:bg-gray-800 min-h-screen grid gap-0 grid-rows-pancake">
+      <div className="bg-white dark:bg-gray-800 min-h-screen grid gap-0 grid-rows-pancake font-sans">
         <Header/>
           <Switch>
             <Route path="/webdl">

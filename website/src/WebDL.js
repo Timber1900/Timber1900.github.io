@@ -1,11 +1,62 @@
+import { useState } from "react";
 import WebDL_Extension_Example from "./images/WebDL_Extension_Example.mp4";
 import WebDL_Playlist_Example from "./images/WebDL_Playlist_Example.mp4";
 import WebDL_Search_Example from "./images/WebDL_Search_Example.mp4";
 import WebDL_VideoOptions_Example from "./images/WebDL_VideoOptions_Example.mp4";
+import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 
 const WebDL = () => {
+  const [showCopied, setShowCopied] = useState(false)
+
+  const copyWingetCommand = () => {
+    setShowCopied(true);
+    navigator.clipboard.writeText("winget install WebDL")
+    setTimeout(() => {
+      console.log("change")
+      setShowCopied(false)
+    }, 700);
+  }
+
   return(
     <div className="flex flex-col gap-4 justify-start items-center">
+      {/*Introduction*/}
+      <div className="dark:text-white text-black font-extrabold text-lg flex text-center gap-2 flex-col jus m-4">
+        <h1 className="text-center text-4xl font-extrabold text-black dark:text-white py-5 m-4">WebDL</h1>
+        <p className="text-justify font-semibold m-4">WebDL is a Windows application designed to download videos from the web with a focus on popular websites such as: <span className="font-bold">YouTube</span>, <span className="font-bold">Twitch</span>, <span className="font-bold">Imgur</span>, <span className="font-bold">Twitter</span>...</p>
+        <h1 className="text-center text-4xl font-extrabold text-black dark:text-white py-5">Installing WebDL</h1>
+        <div className="flex flex-col justify-start items-center md:grid md:grid-cols-5 md:grid-rows-1 md:place-items-center max-w-screen-xl h-auto w-auto gap-4 m-4">
+          <div className="col-span-3 rounded-lg w-full flex flex-col justify-start items-center h-24">
+            <h2 className="py-2 px-4">Using winget</h2>
+            <code className="dark:bg-black bg-gray-300 py-2 px-4 rounded-lg min-w-max w-4/5 flex justify-start items-center">
+              {"C:>"} winget install WebDL
+              <div className="group relative w-max h-max ml-auto self-end">
+                <button onClick={copyWingetCommand} className="dark:bg-gray-900 bg-gray-400 px-1 py-0.5 rounded-lg focus:outline-none dark:active:bg-gray-700 active:bg-gray-500 transition-colors">Copy!</button>
+                <div className={`absolute ${showCopied ? "opacity-80" : "opacity-0"} block bottom-full-plus bg-gray-400 group-active:opacity-80 transition-opacity duration-500 rounded-md py-0.5 px-1 left-1/2 -translate-x-1/2 transform`}>
+                  <p>Copied</p>
+                  <div className="relative">
+                    <div className="absolute border-4 border-gray-400 -rotate-45 -top-1 left-1/2 -translate-x-1/2 transform"></div>
+                  </div>
+                </div>
+              </div>
+            </code>
+          </div>
+          <div className="col-span-2 rounded-lg w-full h-24">
+            <h2 className="py-2 px-4">Using windows package installer (.exe)</h2>
+            <a href="https://github.com/Timber1900/WebDL/releases/download/v9.2/WebDL.exe" className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">
+              <GetAppRoundedIcon id="downloadWebDL" className=" text-indigo-800 dark:text-blue-400 fill-current w-8 h-8 mx-1"/>
+              Download version v9.2 (Latest)
+            </a>
+          </div>
+        </div>
+      </div>
+      {/* Features index */}
+      <div className="flex flex-col gap-4 justify-start ">
+        <h1 className="text-4xl font-extrabold text-black dark:text-white py-5 m-4 text-left">WebDL Features</h1>
+        <a href="#webdl-chrome-extension" className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">{"•"} WebDL Chrome Extension</a>
+        <a href="#webdl-playlist" className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">{"•"} Playlist support</a>
+        <a href="#webdl-search" className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">{"•"} Search YouTube in WebDL</a>
+        <a href="#webdl-trim" className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">{"•"} WebDL video options</a>
+      </div>
       {/* Chrome Extension */}
       <span className="block h-24 -mt-24 invisible" id="webdl-chrome-extension"></span>
       <div className="md:grid md:grid-rows-1 md:grid-cols-5 flex flex-col gap-4 rounded-xl w-auto max-w-screen-xl h-auto md:min-h-card dark:text-white text-black font-extrabold text-2xl m-4">

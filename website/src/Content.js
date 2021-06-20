@@ -32,10 +32,10 @@ const Content = () => {
           <video autoPlay loop muted playsInline src={WebDlLogo} alt='WebDL' className="rounded-md shadow-xl"/>
         </div>
         <div className="h-auto w-full p-4 flex flex-col justify-start items-center rounded-md my-auto">
-          <div className="flex flex-row place-items-center">
-            <GetAppRoundedIcon id="downloadWebDL" className="text-black dark:text-white fill-current w-8 h-8 mx-1"/>
+          <div className="group flex flex-row place-items-center">
+            <GetAppRoundedIcon id="downloadWebDL" className=" text-indigo-800 dark:text-blue-400 fill-current w-8 h-8 mx-1"/>
             <label htmlFor='downloadWebDL'>
-              <a href="https://github.com/Timber1900/WebDL/releases/latest" className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">Download</a>
+              <a href="https://github.com/Timber1900/WebDL/releases/latest" className="group-hover:text-indigo-600 dark:group-hover:text-blue-200 inline-block text-indigo-800 dark:text-blue-400 font-bold transition-colors duration-300">Download</a>
             </label>
           </div>
           <Link to={`${match.url}webdl`} className="hover:text-indigo-600 dark:hover:text-blue-200 transition-colors duration-300 inline-block text-indigo-800 dark:text-blue-400 font-bold">{"•"} Learn more</Link>
