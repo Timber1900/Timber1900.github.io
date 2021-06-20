@@ -43,12 +43,10 @@ module.exports = {
       display: ['group-hover'],
       width: ['group-hover'],
       backgroundColor: ['active'],
-      opacity: ['group-active'],
-      scrollbar: ['dark']
+      opacity: ['group-active']
     }
   },
   plugins: [
-    require('tailwindcss-interaction-variants'),
-    require('tailwind-scrollbar')
+    require('tailwindcss-interaction-variants')
   ]
 }

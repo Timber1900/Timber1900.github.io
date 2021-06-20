@@ -8,12 +8,12 @@ const Header = () => {
   const [dark, setDark] = useState(selectDarkMode());
 
   return(
-    <header className="bg-white dark:bg-gray-800 w-full flex justify-center custombp:sticky custombp:top-0 z-10">
-      <div className="flex h-20 place-items-center my-2 border-b border-gray-200 dark:border-gray-700 w-full-minus-padding-small sm:w-full-minus-padding relative">
-        <h1 className="text-center text-xl sm:text-4xl font-sans font-bold mx-auto text-black dark:text-white"><Link to="/">Hugo's Github Projects</Link></h1>
+    <header className="z-10 flex justify-center w-full bg-white dark:bg-gray-800 custombp:sticky custombp:top-0">
+      <div className="relative flex h-20 my-2 border-b border-gray-200 place-items-center dark:border-gray-700 w-full-minus-padding-small sm:w-full-minus-padding">
+        <h1 className="mx-auto font-sans text-xl font-bold text-center text-black sm:text-4xl dark:text-white"><Link to="/">Hugo's Github Projects</Link></h1>
         <label htmlFor='switch'>
           <Switch color="primary" id="switch" checked={dark === "dark"} onChange={() => {setDark(changeDarkMode())}}/>
-          <NightsStayIcon className="text-black dark:text-white fill-current"/>
+          <NightsStayIcon className="text-black fill-current dark:text-white"/>
         </label>
       </div>
     </header>
