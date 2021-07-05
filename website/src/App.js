@@ -18,15 +18,15 @@ function App() {
   return (
     <Router>
       <div className="grid min-h-screen gap-0 font-sans bg-white dark:bg-gray-800 grid-rows-pancake">
-        <Header/>
-          <Switch>
-            <Route path="/webdl">
-              <WebDL />
-            </Route>
-            <Route path="/">
-              <Content />
-            </Route>
-          </Switch>
+        <Header />
+        <Switch>
+          <Route path="/webdl">
+            <WebDL />
+          </Route>
+          <Route path="*">
+            <Content />
+          </Route>
+        </Switch>
         <Footer />
       </div>
     </Router>
