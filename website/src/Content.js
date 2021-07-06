@@ -13,8 +13,8 @@ const Content = () => {
   })
 
   return (
-    <div className="z-0 grid w-full h-full grid-cols-1 gap-6 px-6 py-2 lg:grid-cols-2 auto-rows-auto lg:gap-12 lg:px-12">
-      <div className="grid grid-cols-1 gap-2 text-2xl font-extrabold text-black bg-blue-500 shadow-lg place-items-center min-h-card dark:bg-blue-800 rounded-xl dark:text-white 2xl:grid-cols-2 2xl:grid-rows-2">
+    <div className="z-0 grid w-full h-full grid-cols-2 gap-6 px-6 py-2 lg:grid-cols-4 auto-rows-auto lg:gap-12 lg:px-12">
+      <div className="grid grid-cols-1 col-span-2 gap-2 text-2xl font-extrabold text-black lg:col-span-4 place-items-center min-h-card rounded-xl dark:text-white 2xl:grid-cols-2 2xl:grid-rows-2">
         <div className="flex flex-col w-full h-full p-4 text-lg font-semibold text-justify rounded-md 2xl:row-span-2">
           <h1 className="py-8 text-4xl font-bold text-center">A bit about me!</h1>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;Hi! My name's <span className="font-bold">Hugo Teixeira</span>, I'm a 18 year old student from <span className="font-bold">Portugal</span>, <span className="font-bold">Viseu</span>, currently enrolled in <span className="font-bold">ESAM</span> (Escola Secundária Alves Martins), in scientifics with hopes to follow Aerospacial Engineering in university, some of my hobbies include:</p>
@@ -25,7 +25,7 @@ const Content = () => {
           <img src={MyPhoto} alt='Hugo' className="border-4 border-white rounded-full shadow-xl w-half dark:border-gray-800" />
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-2 text-2xl font-extrabold text-black bg-blue-500 shadow-lg place-items-center min-h-card dark:bg-blue-800 rounded-xl dark:text-white 2xl:grid-cols-2 2xl:grid-rows-2">
+      <div className="grid grid-cols-1 col-span-2 gap-2 text-2xl font-extrabold text-black bg-gray-200 shadow-md dark:bg-gray-700 place-items-center min-h-card rounded-xl dark:text-white 2xl:grid-cols-2 2xl:grid-rows-2">
         <div className="flex flex-col w-full h-full p-4 text-lg font-semibold text-justify rounded-md 2xl:row-span-2">
           <h1 className="py-8 text-4xl font-bold text-center">WebDL</h1>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;<Link to={`${match.url}webdl`} className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">WebDL</Link> is a Windows application designed to download videos from the web with a focus on popular websites such as: <span className="font-bold">YouTube</span>, <span className="font-bold">Twitch</span>, <span className="font-bold">Imgur</span>, <span className="font-bold">Twitter</span>...</p>
@@ -37,7 +37,7 @@ const Content = () => {
         </div>
         <div className="flex flex-col items-center justify-start w-full h-auto p-4 my-auto rounded-md">
           <div className="flex flex-row group place-items-center">
-            <GetAppRoundedIcon id="downloadWebDL" className="w-8 h-8 mx-1 text-indigo-800 fill-current  dark:text-blue-400" />
+            <GetAppRoundedIcon id="downloadWebDL" className="w-8 h-8 mx-1 text-indigo-800 fill-current dark:text-blue-400" />
             <label htmlFor='downloadWebDL'>
               <a href="https://github.com/Timber1900/WebDL/releases/latest" className="inline-block font-bold text-indigo-800 transition-colors duration-300 group-hover:text-indigo-600 dark:group-hover:text-blue-200 dark:text-blue-400">Download</a>
             </label>
@@ -45,7 +45,7 @@ const Content = () => {
           <Link to={`${match.url}webdl`} className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">{"•"} Learn more</Link>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-2 text-2xl font-extrabold text-black bg-blue-500 shadow-lg place-items-center min-h-card dark:bg-blue-800 rounded-xl dark:text-white 2xl:grid-cols-2 2xl:grid-rows-2">
+      <div className="grid grid-cols-1 col-span-2 gap-2 text-2xl font-extrabold text-black bg-gray-200 shadow-md dark:bg-gray-700 place-items-center min-h-card rounded-xl dark:text-white 2xl:grid-cols-2 2xl:grid-rows-2">
         <div className="flex flex-col w-full h-full p-4 text-lg font-semibold text-justify rounded-md 2xl:row-span-2">
           <h1 className="py-8 text-4xl font-bold text-center">OpenTK 3D Engine</h1>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://open.timber1900.tk" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">OpenTK 3D Engine</a> is a <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">C#</code> library for 2D/3D applications. The example is a 2D Raycaster written with the help of the library for rendering, however actual 3D functions exist. Heres what it is good for:</p>
@@ -65,7 +65,7 @@ const Content = () => {
           <a href="https://github.com/Timber1900/RaycasterWithOpenTK" className="inline-block font-bold text-left text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">{"•"} Raycaster Example</a>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-2 text-2xl font-extrabold text-black bg-blue-500 shadow-lg place-items-center min-h-card dark:bg-blue-800 rounded-xl dark:text-white 2xl:grid-cols-2 2xl:grid-rows-2">
+      <div className="grid grid-cols-1 col-span-2 col-start-1 gap-2 text-2xl font-extrabold text-black bg-gray-200 shadow-md dark:bg-gray-700 lg:col-start-2 place-items-center min-h-card rounded-xl dark:text-white 2xl:grid-cols-2 2xl:grid-rows-2">
         <div className="flex flex-col w-full h-full p-4 text-lg font-semibold text-justify rounded-md 2xl:row-span-2">
           <h1 className="py-8 text-4xl font-bold text-center">3D Parametric function viewer</h1>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://param.timber1900.tk/" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">3D Parametric function viewer</a> is a progressive web app to visualize 3D parametric functions, it is made in <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">javascript</code> with <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">three.js</code> for the 3D rendering.</p>
