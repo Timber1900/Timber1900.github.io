@@ -38,6 +38,9 @@ module.exports = {
       },
       inset: {
         'full-plus': 'calc(100% + .5rem)'
+      },
+      transitionTimingFunction: {
+        back: "cubic-bezier(0.18, 0.89, 0.32, 1.28)"
       }
     },
   },

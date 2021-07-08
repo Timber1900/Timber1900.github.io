@@ -14,14 +14,14 @@ const Content = () => {
 
   return (
     <div className="z-0 grid w-full h-full grid-cols-2 gap-6 px-6 py-2 lg:grid-cols-4 auto-rows-auto lg:gap-12 lg:px-12">
-      <div className="grid grid-cols-1 col-span-2 gap-2 text-2xl font-extrabold text-black lg:col-span-4 place-items-center min-h-card rounded-xl dark:text-white 2xl:grid-cols-2 2xl:grid-rows-2">
-        <div className="flex flex-col w-full h-full p-4 text-lg font-semibold text-justify rounded-md 2xl:row-span-2">
+      <div className="grid grid-cols-1 col-span-2 gap-2 text-2xl font-extrabold text-black lg:col-span-4 place-items-center min-h-card rounded-xl dark:text-white 2xl:grid-cols-12 2xl:grid-rows-2">
+        <div className="flex flex-col w-full h-full p-4 text-lg font-semibold text-justify rounded-md 2xl:col-span-7 2xl:row-span-2">
           <h1 className="py-8 text-4xl font-bold text-center">A bit about me!</h1>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;Hi! My name's <span className="font-bold">Hugo Teixeira</span>, I'm a 18 year old student from <span className="font-bold">Portugal</span>, <span className="font-bold">Viseu</span>, currently enrolled in <span className="font-bold">ESAM</span> (Escola Secundária Alves Martins), in scientifics with hopes to follow Aerospacial Engineering in university, some of my hobbies include:</p>
           <p className="text-left">{"•"} Programming, mainly <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">Javascript</code>, <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">Typescript</code>, <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">C#</code>, <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">Python</code></p>
           <p className="text-left">{"•"} Gaming, mostly GTAV, CS:GO, Minecraft.</p>
         </div>
-        <div className="grid w-full h-full row-span-2 row-start-2 p-4 rounded-md place-items-center 2xl:row-start-auto">
+        <div className="grid w-full h-full row-span-2 row-start-2 p-4 rounded-md 2xl:col-span-5 place-items-center 2xl:row-start-auto">
           <img src={MyPhoto} alt='Hugo' className="border-4 border-white rounded-full shadow-xl w-half dark:border-gray-800" />
         </div>
       </div>
