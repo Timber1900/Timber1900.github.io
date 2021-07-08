@@ -1,5 +1,9 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  mode: 'jit',
+  purge: [
+    './public/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx,vue}',
+  ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
@@ -38,13 +42,6 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      visibility: ['group-hover'],
-      display: ['group-hover'],
-      width: ['group-hover'],
-      backgroundColor: ['active'],
-      opacity: ['group-active']
-    }
   },
   plugins: [
     require('tailwindcss-interaction-variants')

@@ -23,7 +23,7 @@ function App() {
           <Route path="/webdl">
             <WebDL />
           </Route>
-          <Route path="*">
+          <Route path="/">
             <Content />
           </Route>
         </Switch>
