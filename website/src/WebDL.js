@@ -6,19 +6,18 @@ import WebDL_VideoOptions_Example from "./images/WebDL_VideoOptions_Example.mp4"
 import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 
 const WebDL = () => {
-  const [showCopied, setShowCopied] = useState(false)
+  const [copied, setCopied] = useState("Click to copy.")
 
   useEffect(() => {
     document.title = 'Hugos Github Projects - WebDL';
   })
 
   const copyWingetCommand = () => {
-    setShowCopied(true);
+    setCopied("Copied!");
     navigator.clipboard.writeText("winget install WebDL")
     setTimeout(() => {
-      console.log("change")
-      setShowCopied(false)
-    }, 700);
+      setCopied("Click to copy.")
+    }, 1000);
   }
 
   return(
@@ -33,21 +32,13 @@ const WebDL = () => {
             <h2 className="px-4 py-2">Using winget</h2>
             <code className="flex items-center justify-start px-4 py-2 text-base bg-gray-300 rounded-lg dark:bg-black sm:text-xl min-w-max sm:w-4/5">
               <p className="mr-4">{"C:>"} winget install WebDL</p>
-              <div className="relative self-end ml-auto group w-max h-max">
-                <button onClick={copyWingetCommand} className="dark:bg-gray-900 bg-gray-400 px-1 py-0.5 rounded-lg focus:outline-none dark:active:bg-gray-700 active:bg-gray-500 transition-colors over">Copy!</button>
-                <div className={`absolute ${showCopied ? "opacity-80" : "opacity-0"} block bottom-full-plus bg-gray-400 group-active:opacity-80 transition-opacity duration-500 rounded-md py-0.5 px-1 left-1/2 -translate-x-1/2 transform`}>
-                  <p>Copied</p>
-                  <div className="relative">
-                    <div className="absolute transform -rotate-45 -translate-x-1/2 border-4 border-gray-400 -top-1 left-1/2"></div>
-                  </div>
-                </div>
-              </div>
+              <button aria-label={copied} onClick={copyWingetCommand} className={`dark:bg-gray-900 bg-gray-400 px-1 py-0.5 rounded-lg focus:outline-none dark:active:bg-gray-700 active:bg-gray-500 transition-colors over ml-auto before:absolute relative before:bottom-[125%] before:w-max before:-inset-x-16 before:text-center before:mx-auto before:bg-gray-400 dark:before:bg-gray-900 before:px-1 before:py-0.5 before:rounded-md before:content-[attr(aria-label)] hover:before:content-[attr(aria-label)] dark:before:content-[attr(aria-label)] after:border-b-4 after:border-r-4 after:rotate-45 after:absolute after:border-gray-400 dark:after:border-gray-900 after:bottom-[120%] after:inset-x-0 after:mx-auto after:w-0 after:h-0 hover:after:opacity-100 after:opacity-0 hover:before:opacity-100 before:opacity-0 after:transition-opacity ${copied === "Copied!" ? 'before:w-24' : 'before:w-44'} before:transition-all before:whitespace-nowrap before:overflow-x-hidden`}>Copy!</button>
             </code>
           </div>
           <div className="w-full h-24 col-span-2 rounded-lg">
             <h2 className="px-4 py-2">Using windows package installer (.exe)</h2>
             <a href="https://github.com/Timber1900/WebDL/releases/download/v9.2/WebDL.exe" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">
-              <GetAppRoundedIcon id="downloadWebDL" className="w-8 h-8 mx-1 text-indigo-800 fill-current  dark:text-blue-400"/>
+              <GetAppRoundedIcon id="downloadWebDL" className="w-8 h-8 mx-1 text-indigo-800 fill-current dark:text-blue-400"/>
               Download version v9.2 (Latest)
             </a>
           </div>
