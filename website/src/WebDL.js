@@ -12,9 +12,9 @@ const WebDL = () => {
     document.title = 'Hugos Github Projects - WebDL';
   })
 
-  const copyWingetCommand = () => {
+  const copyWingetCommand = (text) => {
     setCopied("Copied!");
-    navigator.clipboard.writeText("winget install WebDL")
+    navigator.clipboard.writeText(text)
     setTimeout(() => {
       setCopied("Click to copy.")
     }, 1000);
@@ -27,21 +27,30 @@ const WebDL = () => {
         <h1 className="py-5 m-4 text-4xl font-extrabold text-center text-black dark:text-white">WebDL</h1>
         <p className="m-4 font-semibold text-justify">WebDL is a Windows application designed to download videos from the web with a focus on popular websites such as: <span className="font-bold">YouTube</span>, <span className="font-bold">Twitch</span>, <span className="font-bold">Imgur</span>, <span className="font-bold">Twitter</span>...</p>
         <h1 className="py-5 text-4xl font-extrabold text-center text-black dark:text-white">Installing WebDL</h1>
+        <h2 className="text-2xl">On Windows</h2>
         <div className="flex flex-col items-center justify-start w-auto h-auto max-w-screen-xl gap-4 m-4 md:grid md:grid-cols-5 md:grid-rows-1 md:place-items-center">
           <div className="flex flex-col items-center justify-start w-full h-24 col-span-3 rounded-lg">
             <h2 className="px-4 py-2">Using winget</h2>
             <code className="flex items-center justify-start px-4 py-2 text-base bg-gray-300 rounded-lg dark:bg-black sm:text-xl min-w-max sm:w-4/5">
-              <p className="mr-4">{"C:>"} winget install WebDL</p>
-              <button aria-label={copied} onClick={copyWingetCommand} className={`dark:bg-gray-900 bg-gray-400 px-1 py-0.5 rounded-lg focus:outline-none dark:active:bg-gray-700 active:bg-gray-500 transition-colors over ml-auto before:absolute relative before:bottom-[125%] before:w-max before:-inset-x-16 before:text-center before:mx-auto before:bg-gray-400 dark:before:bg-gray-900 before:px-1 before:py-0.5 before:rounded-md before:content-[attr(aria-label)] hover:before:content-[attr(aria-label)] dark:before:content-[attr(aria-label)] after:border-b-4 after:border-r-4 after:rotate-45 after:absolute after:border-gray-400 dark:after:border-gray-900 after:bottom-[120%] after:inset-x-0 after:mx-auto after:w-0 after:h-0 hover:after:opacity-100 after:opacity-0 hover:before:opacity-100 before:opacity-0 after:transition-opacity ${copied === "Copied!" ? 'before:w-24' : 'before:w-44'} before:transition-all before:whitespace-nowrap before:overflow-x-hidden`}>Copy!</button>
+              <p className="mr-4 before:content-[attr(aria-label)] flex gap-2" aria-label={"C:>"}>winget install WebDL</p>
+              <button aria-label={copied} onClick={() => copyWingetCommand("winget install WebDL")} className={`dark:bg-gray-900 bg-gray-400 px-1 py-0.5 rounded-lg focus:outline-none dark:active:bg-gray-700 active:bg-gray-500 transition-colors over ml-auto before:absolute relative before:bottom-[125%] before:w-max before:-inset-x-16 before:text-center before:mx-auto before:bg-gray-400 dark:before:bg-gray-900 before:px-1 before:py-0.5 before:rounded-md before:content-[attr(aria-label)] hover:before:content-[attr(aria-label)] dark:before:content-[attr(aria-label)] after:border-b-4 after:border-r-4 after:rotate-45 after:absolute after:border-gray-400 dark:after:border-gray-900 after:bottom-[120%] after:inset-x-0 after:mx-auto after:w-0 after:h-0 hover:after:opacity-100 after:opacity-0 hover:before:opacity-100 before:opacity-0 after:transition-opacity ${copied === "Copied!" ? 'before:w-24' : 'before:w-44'} before:transition-all before:whitespace-nowrap before:overflow-x-hidden`}>Copy!</button>
             </code>
           </div>
           <div className="w-full h-24 col-span-2 rounded-lg">
             <h2 className="px-4 py-2">Using windows package installer (.exe)</h2>
-            <a href="https://github.com/Timber1900/WebDL/releases/download/v9.2/WebDL.exe" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">
+            <a href="https://github.com/Timber1900/WebDL/releases/download/v10.3.2/WebDL.exe" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">
               <GetAppRoundedIcon id="downloadWebDL" className="w-8 h-8 mx-1 text-indigo-800 fill-current dark:text-blue-400"/>
-              Download version v9.2 (Latest)
+              Download version v10.3.2 (Latest)
             </a>
           </div>
+        </div>
+        <h2 className="text-2xl">On Linux</h2>
+        <div className="flex flex-col items-center justify-start w-auto h-auto max-w-screen-xl gap-4 m-4">
+          <p className="text-base font-normal select-none">Download and run <a className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400" href='https://github.com/Timber1900/WebDL/releases/download/beta-linux-v10.3.2/WebDL.sh'>WebDL.sh</a>, make sure to run <code aria-label="$" className="items-center justify-start inline-block px-2 py-1 mx-1 bg-gray-300 rounded-lg select-text dark:bg-black before:content-[attr(aria-label)] before:mr-2">sudo chmod +x ./WebDL.sh<button aria-label={copied} onClick={() => copyWingetCommand("sudo chmod +x ./WebDL.sh")} className={`dark:bg-gray-900 bg-gray-400 px-1 py-0.5 rounded-lg focus:outline-none dark:active:bg-gray-700 active:bg-gray-500 transition-colors over ml-auto before:absolute relative before:bottom-[125%] before:w-max before:-inset-x-16 before:text-center before:mx-auto before:bg-gray-400 dark:before:bg-gray-900 before:px-1 before:py-0.5 before:rounded-md before:content-[attr(aria-label)] hover:before:content-[attr(aria-label)] dark:before:content-[attr(aria-label)] after:border-b-4 after:border-r-4 after:rotate-45 after:absolute after:border-gray-400 dark:after:border-gray-900 after:bottom-[120%] after:inset-x-0 after:mx-auto after:w-0 after:h-0 hover:after:opacity-100 after:opacity-0 hover:before:opacity-100 before:opacity-0 after:transition-opacity ${copied === "Copied!" ? 'before:w-20' : 'before:w-36'} before:transition-all before:whitespace-nowrap before:overflow-x-hidden select-none ml-2`}>Copy!</button></code> to be able to execute the script.</p>
+        </div>
+        <h2 className="text-2xl">On MacOS</h2>
+        <div className="flex flex-col items-center justify-start w-auto h-auto max-w-screen-xl gap-4 m-4">
+          <p className="text-base font-normal select-none">Download <a className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400" href='https://github.com/Timber1900/WebDL/releases/download/beta-osx-v10.3.2/WebDL.app.7z'>WebDL.app.7z</a>, extract and move it to the applications folder, you will have to allow the application to run in the settings</p>
         </div>
       </div>
       {/* Features index */}
