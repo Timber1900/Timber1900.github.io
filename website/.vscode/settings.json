@@ -1,0 +1,7 @@
+{
+  "git.ignoreLimitWarning": true,
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  }
+}

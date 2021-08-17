@@ -4,8 +4,9 @@ import WebDL_Playlist_Example from "./images/WebDL_Playlist_Example.mp4";
 import WebDL_Search_Example from "./images/WebDL_Search_Example.mp4";
 import WebDL_VideoOptions_Example from "./images/WebDL_VideoOptions_Example.mp4";
 import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
+import { Link, useRouteMatch } from "react-router-dom";
 
-const CopyButton = ({copyText, copied, setCopied}) => {
+const CopyButton = ({ copyText, copied, setCopied }) => {
   const copyCommand = (text) => {
     setCopied("Copied!");
     navigator.clipboard.writeText(text)
@@ -14,7 +15,7 @@ const CopyButton = ({copyText, copied, setCopied}) => {
     }, 1000);
   }
 
-  return(
+  return (
     <button aria-label={copied} onClick={() => copyCommand(copyText)} className={`dark:bg-gray-900 bg-gray-400 px-1 py-0.5 rounded-lg focus:outline-none dark:active:bg-gray-700 active:bg-gray-500 transition-colors before:absolute relative before:bottom-[125%] before:w-max before:-inset-x-16 before:text-center before:mx-auto before:bg-gray-400 dark:before:bg-gray-900 before:px-1 before:py-0.5 before:rounded-md before:content-[attr(aria-label)] hover:before:content-[attr(aria-label)] dark:before:content-[attr(aria-label)] after:border-b-4 after:border-r-4 after:rotate-45 after:absolute after:border-gray-400 dark:after:border-gray-900 after:bottom-[120%] after:inset-x-0 after:mx-auto after:w-0 after:h-0 hover:after:opacity-100 after:opacity-0 hover:before:opacity-100 before:opacity-0 after:transition-opacity ${copied === "Copied!" ? 'before:w-[9ch]' : 'before:w-[16ch]'} before:transition-all before:whitespace-nowrap before:overflow-x-hidden select-none before:text-center sm:ml-auto`}>Copy!</button>
   )
 }
@@ -22,12 +23,13 @@ const CopyButton = ({copyText, copied, setCopied}) => {
 const WebDL = () => {
   const [copiedWinget, setCopiedWinget] = useState("Click to copy.")
   const [copiedLinux, setCopiedLinux] = useState("Click to copy.")
+  let match = useRouteMatch();
 
   useEffect(() => {
     document.title = 'Hugos Github Projects - WebDL';
   })
 
-  return(
+  return (
     <div className="z-0 flex flex-col items-center justify-start gap-4 overflow-x-hidden">
       {/*Introduction*/}
       <div className="flex flex-col gap-2 text-lg font-extrabold text-center text-black dark:text-white jus sm:m-4">
@@ -46,7 +48,7 @@ const WebDL = () => {
           <div className="w-full h-24 col-span-2 rounded-lg">
             <h2 className="px-4 py-2">Using windows package installer (.exe)</h2>
             <a href="https://github.com/Timber1900/WebDL/releases/download/v10.3.2/WebDL.exe" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">
-              <GetAppRoundedIcon id="downloadWebDL" className="w-8 h-8 mx-1 text-indigo-800 fill-current dark:text-blue-400"/>
+              <GetAppRoundedIcon id="downloadWebDL" className="w-8 h-8 mx-1 text-indigo-800 fill-current dark:text-blue-400" />
               Download version v10.3.2 (Latest)
             </a>
           </div>
@@ -59,7 +61,7 @@ const WebDL = () => {
               <CopyButton copied={copiedLinux} setCopied={setCopiedLinux} copyText="sudo chmod +x ./WebDL.sh" />
             </code>
             <p className="inline">to be able to execute the script.</p>
-           </p>
+          </p>
         </div>
         <h2 className="text-2xl">On MacOS</h2>
         <div className="flex flex-col items-center justify-start w-auto h-auto max-w-screen-xl gap-4 m-4">
@@ -86,7 +88,7 @@ const WebDL = () => {
           </p>
         </div>
         <div className="grid p-4 md:col-span-2 place-items-center">
-          <video autoPlay loop muted playsInline  src={WebDL_Extension_Example} alt='WebDL Extension Example' className="m-4 rounded-md shadow-xl"/>
+          <video autoPlay loop muted playsInline src={WebDL_Extension_Example} alt='WebDL Extension Example' className="m-4 rounded-md shadow-xl" />
         </div>
       </div>
       {/* Playlist */}
@@ -99,7 +101,7 @@ const WebDL = () => {
           </p>
         </div>
         <div className="grid p-4 md:col-span-2 md:col-start-1 md:row-start-1 place-items-center">
-          <video autoPlay loop muted playsInline  src={WebDL_Playlist_Example} alt='WebDL Playlist Example' className="m-4 rounded-md shadow-xl"/>
+          <video autoPlay loop muted playsInline src={WebDL_Playlist_Example} alt='WebDL Playlist Example' className="m-4 rounded-md shadow-xl" />
         </div>
       </div>
       {/* Search */}
@@ -112,7 +114,7 @@ const WebDL = () => {
           </p>
         </div>
         <div className="grid p-4 md:col-span-2 place-items-center">
-          <video autoPlay loop muted playsInline  src={WebDL_Search_Example} alt='WebDL Search Example' className="m-4 rounded-md shadow-xl"/>
+          <video autoPlay loop muted playsInline src={WebDL_Search_Example} alt='WebDL Search Example' className="m-4 rounded-md shadow-xl" />
         </div>
       </div>
       {/* Video Options */}
@@ -125,9 +127,12 @@ const WebDL = () => {
           </p>
         </div>
         <div className="grid p-4 md:col-span-2 md:col-start-1 md:row-start-1 place-items-center">
-          <video autoPlay loop muted playsInline  src={WebDL_VideoOptions_Example} alt='WebDL Video Options Example' className="m-4 rounded-md shadow-xl"/>
+          <video autoPlay loop muted playsInline src={WebDL_VideoOptions_Example} alt='WebDL Video Options Example' className="m-4 rounded-md shadow-xl" />
         </div>
       </div>
+      {/* FAQ Link*/}
+      <Link to={`${match.url}faq`} className="inline-block text-4xl font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">FAQ</Link>
+
     </div>
 
 
