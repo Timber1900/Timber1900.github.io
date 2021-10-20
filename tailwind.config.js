@@ -3,6 +3,11 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
+    textIndent: { // defaults to {}
+      '0': '0',
+      '1': '0.25rem',
+      '2': '0.5rem',
+    },
     extend: {
       textIndent: { // defaults to {}
         '1': '0.5rem',
