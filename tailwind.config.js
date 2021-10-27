@@ -7,6 +7,7 @@ module.exports = {
       '0': '0',
       '1': '0.25rem',
       '2': '0.5rem',
+      '4': '1rem',
     },
     extend: {
       textIndent: { // defaults to {}
