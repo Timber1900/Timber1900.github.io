@@ -2,7 +2,6 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Head from 'next/head';
 
-
 const WebDLFAQ = () => {
   return (
     <div>
@@ -61,6 +60,23 @@ const WebDLFAQ = () => {
               </p>
             </section>
           </section>
+          <section className="w-full h-auto max-w-screen-xl m-4 text-black rounded-xl dark:text-white">
+            <h2 className="mb-4 text-4xl font-bold">How can I download private or age restricted videos?</h2>
+            <section className="text-xl font-normal indent-4">
+              <p aria-label="•" className="before:content-[attr(aria-label)] before:pr-2">
+                First you need to extract the cookies from YouTube, to do this use an extension such as <a href="https://chrome.google.com/webstore/detail/get-cookiestxt/bgaddhkoddajcdgocldbbfleckgcbcid" className="inline-block font-bold text-indigo-800 transition-colors duration-300 indent-0 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">this one</a>.
+              </p>
+              <p aria-label="•" className="before:content-[attr(aria-label)] before:pr-2">
+                Once you have the cookies.txt file upload it to WebDL in the settings page
+              </p>
+              <p aria-label="•" className="before:content-[attr(aria-label)] before:pr-2">
+                Now you should be able to download private videos!
+              </p>
+              <p aria-label="•" className="before:content-[attr(aria-label)] before:pr-2">
+                If you ever want to delete the cookies from WebDL you can do so in the settings page.
+              </p>
+            </section>
+          </section>
           <section className="w-auto h-auto max-w-screen-xl m-4 text-black rounded-xl dark:text-white">
             <h2 className="mb-4 text-4xl font-bold">My issue isn't on this list</h2>
             <section className="text-xl font-normal indent-4">
@@ -70,7 +86,6 @@ const WebDLFAQ = () => {
               <p aria-label="•" className="before:content-[attr(aria-label)] before:pr-2">
                 If it also isn't there, create a <a href="https://github.com/Timber1900/WebDL/issues/new?assignees=timber1900&labels=bug+report&template=bug_report.md&title=" className="inline-block font-bold text-indigo-800 transition-colors duration-300 indent-0 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">Bug Report</a> where you include the link of the video you tried to download and a screenshot of the <b>developer console</b> (you can open this by pressing ctrl-shift-i).
               </p>
-
             </section>
           </section>
         </div>

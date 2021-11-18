@@ -39,18 +39,18 @@ const WebDL = () => {
             <h1 className="py-5 text-4xl font-extrabold text-center text-black dark:text-white">Installing WebDL</h1>
             <h2 className="text-2xl">On Windows</h2>
             <div className="flex flex-col items-center justify-start w-auto h-auto max-w-screen-xl gap-4 m-4 md:grid md:grid-cols-4 md:grid-rows-1 md:place-items-center">
-              <div className="flex flex-col items-center justify-start w-full h-24 col-span-2 rounded-lg">
+              {/* <div className="flex flex-col items-center justify-start w-full h-24 col-span-2 rounded-lg">
                 <h2 className="px-4 py-2">Using winget</h2>
                 <code aria-label={"C:>"} className="items-center justify-start inline-block px-2 py-1 mx-1 bg-gray-300 rounded-lg select-text dark:bg-black before:content-[attr(aria-label)] before:mr-2">
                   <p className="inline mr-2" >winget install WebDL</p>
                   <CopyButton copied={copiedWinget} setCopied={setCopiedWinget} copyText="winget install WebDL" />
                 </code>
-              </div>
-              <div className="w-full h-24 col-span-2 rounded-lg">
+              </div> */}
+              <div className="w-full h-24 col-span-4 rounded-lg">
                 <h2 className="px-4 py-2">Using windows package installer (.exe)</h2>
-                <a href="https://github.com/Timber1900/WebDL/releases/download/v11.2.2/WebDL.exe" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">
+                <a href="https://github.com/Timber1900/WebDL/releases/download/v11.2.3/WebDL.exe" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">
                   <GetAppRoundedIcon id="downloadWebDL" className="w-8 h-8 mx-1 text-indigo-800 fill-current dark:text-blue-400" />
-                  Download version v11.2.2 (Latest)
+                  Download version v11.2.3 (Latest)
                 </a>
               </div>
             </div>
