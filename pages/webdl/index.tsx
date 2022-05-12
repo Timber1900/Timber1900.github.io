@@ -27,9 +27,9 @@ const WebDL = () => {
     <div>
       <Head>
         <link rel="shortcut icon" href="/favicon.png" />
-        <title>Hugo's Github Projects - WebDL</title>
+        <title>Hugo's Website - WebDL</title>
       </Head>
-      <div className="grid min-h-screen gap-0 font-sans bg-white dark:bg-gray-800 grid-rows-pancake">
+      <div className="grid min-h-screen gap-0 font-rubik bg-white dark:bg-[#0e1212] grid-rows-pancake">
         <Header />
         <div className="z-0 flex flex-col items-center justify-start gap-4 overflow-hidden">
           {/*Introduction*/}
@@ -85,8 +85,8 @@ const WebDL = () => {
           </div>
           {/* Chrome Extension */}
           <span className="invisible block h-24 -mt-24" id="webdl-chrome-extension"></span>
-          <div className="flex flex-col w-auto h-auto max-w-screen-xl gap-4 m-4 text-2xl font-extrabold text-black md:grid md:grid-rows-1 md:grid-cols-5 rounded-xl md:min-h-card dark:text-white">
-            <div className="h-auto p-4 text-lg font-semibold md:col-span-3 md:p-10">
+          <div className="flex flex-col w-auto h-auto max-w-screen-xl gap-4 m-4 text-2xl  text-black md:grid md:grid-rows-1 md:grid-cols-5 rounded-xl md:min-h-card dark:text-white">
+            <div className="h-auto p-4 text-lg md:col-span-3 md:p-10">
               <h1 className="py-8 text-4xl font-bold text-left">
                 WebDL Chrome Extension
               </h1>
@@ -100,8 +100,8 @@ const WebDL = () => {
           </div>
           {/* Playlist */}
           <span className="invisible block h-24 -mt-24" id="webdl-playlist"></span>
-          <div className="flex flex-col w-auto h-auto max-w-screen-xl gap-4 m-4 text-2xl font-extrabold text-black md:grid md:grid-rows-1 md:grid-cols-5 rounded-xl md:min-h-card dark:text-white">
-            <div className="h-auto p-4 text-lg font-semibold md:col-span-3 md:col-start-3 md:p-10">
+          <div className="flex flex-col w-auto h-auto max-w-screen-xl gap-4 m-4 text-2xl text-black md:grid md:grid-rows-1 md:grid-cols-5 rounded-xl md:min-h-card dark:text-white">
+            <div className="h-auto p-4 text-lg md:col-span-3 md:col-start-3 md:p-10">
               <h1 className="py-8 text-4xl font-bold text-left">Playlist support</h1>
               <p className="text-justify">
                 WebDL officialy supports YouTube playlists of any size, the days of slow url copy pasting are finnaly over! Simply use the <a href="#webdl-chrome-extension" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">WebDL Chrome Extension</a> to add the playlist to WebDL, or simply paste the playlist URL directly into WebDL, or use the <a href="#webdl-search" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">WebDL Search Feature</a> to search for the playlist directly in WebDL!
@@ -113,8 +113,8 @@ const WebDL = () => {
           </div>
           {/* Search */}
           <span className="invisible block h-24 -mt-24" id="webdl-search"></span>
-          <div className="flex flex-col w-auto h-auto max-w-screen-xl gap-4 m-4 text-2xl font-extrabold text-black md:grid md:grid-rows-1 md:grid-cols-5 rounded-xl md:min-h-card dark:text-white">
-            <div className="h-auto p-4 text-lg font-semibold md:col-span-3 md:p-10">
+          <div className="flex flex-col w-auto h-auto max-w-screen-xl gap-4 m-4 text-2xl text-black md:grid md:grid-rows-1 md:grid-cols-5 rounded-xl md:min-h-card dark:text-white">
+            <div className="h-auto p-4 text-lg md:col-span-3 md:p-10">
               <h1 className="py-8 text-4xl font-bold text-left">Search YouTube in WebDL</h1>
               <p className="text-justify">
                 WebDL also allows you to search youtube directly in the app, simple press the <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">Search Youtube</code> button and search, both videos and <a href="#webdl-playlist" className="inline-block font-bold text-indigo-800 transition-colors duration-300 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">playlists</a>  will show up!
@@ -126,8 +126,8 @@ const WebDL = () => {
           </div>
           {/* Video Options */}
           <span className="invisible block h-24 -mt-24" id="webdl-trim"></span>
-          <div className="flex flex-col w-auto h-auto max-w-screen-xl gap-4 m-4 text-2xl font-extrabold text-black md:grid md:grid-rows-1 md:grid-cols-5 rounded-xl md:min-h-card dark:text-white">
-            <div className="h-auto p-4 text-lg font-semibold md:col-span-3 md:col-start-3 md:p-10">
+          <div className="flex flex-col w-auto h-auto max-w-screen-xl gap-4 m-4 text-2xl text-black md:grid md:grid-rows-1 md:grid-cols-5 rounded-xl md:min-h-card dark:text-white">
+            <div className="h-auto p-4 text-lg md:col-span-3 md:col-start-3 md:p-10">
               <h1 className="py-8 text-4xl font-bold text-left">WebDL video options</h1>
               <p className="text-justify">
                 WebDL offers single video options for downloading, these include changing video quality, changing the type of video/audio, renaming the file before download and cutting the video into pieces! Besides this there are also global options for when videos are added to the queue, these include changing the type of video/audio aswell as allowing custom extensions!
