@@ -34,12 +34,12 @@ const changeDarkMode = () => {
 
 const Header = () => {
   const [dark, setDark] = useState(selectDarkMode());
-  const { pathname } = useRouter();
+  const { pathname, basePath } = useRouter();
 
   return(
     <header className="z-10 flex justify-center w-full font-rubik">
       <div className="relative flex flex-row h-20 my-2 items-center justify-end w-full-minus-padding-small sm:w-full-minus-padding">
-        <p className='mr-auto ml-12 text-3xl font-semibold dark:text-indigo-600 text-blue-600'>{pathname == process.env.BACKEND_URL + "/" ? "Home" : "WebDL"}</p>
+        <p className='mr-auto ml-12 text-3xl font-semibold dark:text-indigo-600 text-blue-600'>{pathname == `${basePath}/` ? "Home" : "WebDL"}</p>
         <ul className='flex flex-row items-center justify-center gap-4 mx-20 text-lg'>
           <li>
             <Link href="/" as={process.env.BACKEND_URL + '/'}>
