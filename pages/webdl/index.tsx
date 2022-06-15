@@ -29,7 +29,7 @@ const WebDL = () => {
         <link rel="shortcut icon" href="/favicon.png" />
         <title>Hugo's Website - WebDL</title>
       </Head>
-      <div className="grid min-h-screen gap-0 font-rubik bg-white dark:bg-[#0e1212] grid-rows-pancake">
+      <div className="grid min-h-screen gap-0 font-rubik bg-white dark:bg-[#0e1212] grid-rows-pancake w-full min-w-[500px]">
         <Header />
         <div className="z-0 flex flex-col items-center justify-start gap-4 overflow-hidden">
           {/*Introduction*/}

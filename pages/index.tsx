@@ -12,7 +12,7 @@ const Content = () => {
         <link rel="shortcut icon" href="/favicon.png" />
         <title>Hugo's Website - Home </title>
       </Head>
-      <div className="relative grid min-h-screen gap-0 font-rubik bg-gradient-to-t from-gray-100 to-white dark:bg-gradient-to-t dark:from-[#121717] dark:to-[#0e1212] grid-rows-pancake">
+      <div className="relative grid h-full gap-0 font-rubik bg-gradient-to-t from-gray-100 to-white dark:bg-gradient-to-t dark:from-[#121717] dark:to-[#0e1212] grid-rows-pancake w-full min-w-[500px]">
         <Header />
         <div className="z-0 grid w-full 2xl:w-[1536px] mx-auto h-full grid-cols-2 gap-6 px-6 py-2 lg:grid-cols-4  lg:gap-12 lg:px-12">
           <div className="grid grid-cols-1 col-span-2 gap-2 text-2xl lg:col-span-4 place-items-center min-h-card rounded-xl 2xl:grid-cols-12 2xl:grid-rows-2">

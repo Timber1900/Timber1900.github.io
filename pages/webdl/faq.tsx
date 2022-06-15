@@ -9,12 +9,12 @@ const WebDLFAQ = () => {
         <link rel="shortcut icon" href="/favicon.png" />
         <title>Hugo's Github Projects - WebDL FAQ</title>
       </Head>
-      <div className="grid min-h-screen gap-0 font-rubik bg-white dark:bg-[#0e1212] grid-rows-pancake">
+      <div className="grid min-h-screen gap-0 font-rubik bg-white dark:bg-[#0e1212] grid-rows-pancake w-full min-w-[500px]">
         <Header />
-        <div className="z-0 flex flex-col items-center justify-start gap-4 overflow-x-hidden min-h-[calc(100vh-12rem)]">
-          <section className="w-auto h-auto max-w-screen-xl m-4 text-black rounded-xl dark:text-white">
-            <h2 className="mb-4 text-4xl font-bold">I can add the video to the queue but it won't download </h2>
-            <section className="text-xl font-normal indent-4">
+        <div className="z-0 flex flex-col items-center justify-start gap-4 min-h-[calc(100vh-12rem)] px-4">
+          <section className="w-auto h-auto max-w-screen-xl my-4 mx-auto text-black rounded-xl dark:text-white">
+            <h2 className="mb-4 md:text-4xl text-xl font-bold">I can add the video to the queue but it won't download </h2>
+            <section className="md:text-xl text-base font-normal indent-4">
               <p aria-label="•" className="before:content-[attr(aria-label)] before:pr-2">
                 If you haven't already, install the <b>mandatory</b> dependency <a href="https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe" className="inline-block font-bold text-indigo-800 transition-colors duration-300 indent-0 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">Microsoft Visual C++ 2010 Redistributable Package (x86)</a>, the program won't work without it.
               </p>
@@ -29,9 +29,9 @@ const WebDLFAQ = () => {
               </p>
             </section>
           </section>
-          <section className="w-auto h-auto max-w-screen-xl m-4 text-black rounded-xl dark:text-white">
-            <h2 className="mb-4 text-4xl font-bold">The video doesnt appear in the queue when the extension is used</h2>
-            <section className="text-xl font-normal indent-4">
+          <section className="w-auto h-auto max-w-screen-xl my-4 mx-auto text-black rounded-xl dark:text-white">
+            <h2 className="mb-4 md:text-4xl text-xl font-bold">The video doesnt appear in the queue when the extension is used</h2>
+            <section className="md:text-xl text-base font-normal indent-4">
               <p aria-label="•" className="before:content-[attr(aria-label)] before:pr-2">
                 Make sure the <b>chrome server port</b>, set by right clicking somewhere in the a chrome tab, and the application port, set in the application settings, are the same <b>number</b>, the default value is <b>3003</b>
               </p>
@@ -46,9 +46,9 @@ const WebDLFAQ = () => {
               </p>
             </section>
           </section>
-          <section className="w-auto h-auto max-w-screen-xl m-4 text-black rounded-xl dark:text-white">
-            <h2 className="mb-4 text-4xl font-bold">The video download speed is very low</h2>
-            <section className="text-xl font-normal indent-4">
+          <section className="w-auto h-auto max-w-screen-xl my-4 mx-auto text-black rounded-xl dark:text-white">
+            <h2 className="mb-4 md:text-4xl text-xl font-bold">The video download speed is very low</h2>
+            <section className="md:text-xl text-base font-normal indent-4">
               <p aria-label="•" className="before:content-[attr(aria-label)] before:pr-2">
                 If the download speed is a lot lower then your regular internet speed, YouTube may be rate limiting your device because you downloaded alot of videos
               </p>
@@ -60,9 +60,9 @@ const WebDLFAQ = () => {
               </p>
             </section>
           </section>
-          <section className="w-full h-auto max-w-screen-xl m-4 text-black rounded-xl dark:text-white">
-            <h2 className="mb-4 text-4xl font-bold">How can I download private or age restricted videos?</h2>
-            <section className="text-xl font-normal indent-4">
+          <section className="w-full h-auto max-w-screen-xl my-4 mx-auto text-black rounded-xl dark:text-white">
+            <h2 className="mb-4 md:text-4xl text-xl font-bold">How can I download private or age restricted videos?</h2>
+            <section className="md:text-xl text-base font-normal indent-4">
               <p aria-label="•" className="before:content-[attr(aria-label)] before:pr-2">
                 First you need to extract the cookies from YouTube, to do this use an extension such as <a href="https://chrome.google.com/webstore/detail/get-cookiestxt/bgaddhkoddajcdgocldbbfleckgcbcid" className="inline-block font-bold text-indigo-800 transition-colors duration-300 indent-0 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">this one</a>.
               </p>
@@ -77,9 +77,9 @@ const WebDLFAQ = () => {
               </p>
             </section>
           </section>
-          <section className="w-auto h-auto max-w-screen-xl m-4 text-black rounded-xl dark:text-white">
-            <h2 className="mb-4 text-4xl font-bold">My issue isn't on this list</h2>
-            <section className="text-xl font-normal indent-4">
+          <section className="w-auto h-auto max-w-screen-xl my-4 mx-auto text-black rounded-xl dark:text-white">
+            <h2 className="mb-4 md:text-4xl text-xl font-bold">My issue isn't on this list</h2>
+            <section className="md:text-xl text-base font-normal indent-4">
               <p aria-label="•" className="before:content-[attr(aria-label)] before:pr-2">
                 If the problem you have isn't documented in this list checkout our <a href="https://github.com/Timber1900/WebDL/issues?q=is%3Aissue+is%3Aclosed" className="inline-block font-bold text-indigo-800 transition-colors duration-300 indent-0 hover:text-indigo-600 dark:hover:text-blue-200 dark:text-blue-400">issues.</a>
               </p>
