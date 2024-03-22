@@ -18,10 +18,10 @@ const Content = () => {
           <div className="grid grid-cols-1 col-span-2 gap-2 text-2xl lg:col-span-4 place-items-center min-h-card rounded-xl 2xl:grid-cols-12 2xl:grid-rows-2">
             <div className="flex flex-col w-full h-full p-4 text-lg rounded-md 2xl:col-span-7 2xl:row-span-2">
               <h1 className="py-8 text-4xl font-bold text-center">A bit about me!</h1>
-              <p className="indent-2">Hi! My name's <span className="font-bold">Hugo Teixeira</span>, I'm a 19 year old student from <span className="font-bold">Portugal</span>, <span className="font-bold">Viseu</span>, currently enrolled in <span className="font-bold">IST</span> (Instituto Superior Tecnico), majoring in Aerospacial Engineering, some of my hobbies include:</p>
+              <p className="indent-2">Hi! My name's <span className="font-bold">Hugo Teixeira</span>, I'm a 21 year old student from <span className="font-bold">Portugal</span>, <span className="font-bold">Viseu</span>, currently enrolled in <span className="font-bold">IST</span> (Instituto Superior Tecnico), majoring in Aerospacial Engineering, some of my hobbies include:</p>
               <p>{"•"} Programming, mainly <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">Javascript</code>, <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">Typescript</code>, <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">C#</code>, <code className="bg-blue-400 dark:bg-blue-600 px-1 py-0.5 rounded-md">C</code></p>
               <p>{"•"} Swimming.</p>
-              <p className='indent-2'>I'm also a member of <a className='indent-0' href='https://tlmoto.tecnico.ulisboa.pt/'>TLMoto</a>, a student team that specializes in creating competition eletric motorcicles. I belong to the powertrain department where I work in the high voltage system and batteries of the motorcycle.</p>
+              <p className='indent-2'>I'm also the technical director <a className='indent-0' href='https://tlmoto.tecnico.ulisboa.pt/'>TLMoto</a>, a student team that specializes in creating competition eletric motorcicles.</p>
             </div>
             <div className="grid w-full h-full row-span-2 row-start-2 p-4 rounded-md 2xl:col-span-5 place-items-center 2xl:row-start-auto">
               <img src="/Me.png" alt='Hugo' className="aspect-square border-4 border-white rounded-full shadow-xl w-half dark:border-[#0e1212]" />
